@@ -116,6 +116,10 @@ header .wrapper {
 .left {
   margin-right: 40px;
 }
+.left h1{
+  font-size: 19px;
+  padding-top: 1em;
+}
 
 .left div {
   margin-top: 5px;
@@ -237,6 +241,7 @@ section {
 }
 
 .intro h1 {
+
   margin: 10px 0;
   padding-bottom: 14px;
 }
