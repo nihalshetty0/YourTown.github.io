@@ -1,0 +1,397 @@
+@import url("https://fonts.googleapis.com/css?family=Allura&display=swap&subset=latin-ext");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+#topBar .menu {
+  background-color: #000000;
+  position: absolute;
+  top: calc(-100vh + 50px);
+  bottom: 100vh;
+  left: 0;
+  right: 0;
+  text-align: center;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  z-index: 22;
+}
+
+#topBar .menu a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+#topBar .menuSlide {
+  -webkit-transform: translateY(100vh);
+          transform: translateY(100vh);
+}
+
+#topBar a:hover {
+  color: #ddd;
+}
+
+#topBar nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: black;
+  padding: 10px;
+  margin: 0;
+  position: relative;
+  z-index: 27;
+}
+
+#topBar nav a {
+  font-size: 20px;
+  font-family: 'Allura', cursive;
+  color: white;
+  text-decoration: none;
+}
+
+#topBar nav a.logo {
+  font-size: 25px;
+  font-weight: 700;
+}
+
+#topBar nav a.menuBtn {
+  color: black;
+  padding: 0 13px;
+  position: relative;
+}
+
+#topBar nav a.menuBtn::before, #topBar nav a.menuBtn::after {
+  content: '';
+  position: absolute;
+  top: 25%;
+  bottom: 70%;
+  left: 0px;
+  right: 0px;
+  background-color: white;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-delay: 0ms;
+          transition-delay: 0ms;
+  -webkit-transition-duration: 300ms;
+          transition-duration: 300ms;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+}
+
+#topBar nav a.menuBtn::after {
+  top: 69%;
+  bottom: 24%;
+}
+
+#topBar nav a.menuBtn:hover::after, #topBar nav a.menuBtn:hover::before {
+  background-color: #ddd;
+}
+
+.makeFlat .menuBtn::after {
+  -webkit-transform: translateY(-350%);
+          transform: translateY(-350%);
+}
+
+.makeFlat .menuBtn::before {
+  top: 24.5%;
+  bottom: 69.5%;
+  -webkit-transform: translateY(450%);
+          transform: translateY(450%);
+}
+
+.makeCross .menuBtn::after {
+  -webkit-transform: translateY(-350%) rotate(-45deg);
+          transform: translateY(-350%) rotate(-45deg);
+}
+
+.makeCross .menuBtn::before {
+  top: 24.5%;
+  bottom: 69.5%;
+  -webkit-transform: translateY(450%) rotate(45deg);
+          transform: translateY(450%) rotate(45deg);
+}
+
+.searchBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 35px;
+  border: 1px solid #888;
+  border-radius: 7px;
+}
+
+.searchBox input[type=text] {
+  border: none;
+  border-bottom-left-radius: 7px;
+  border-top-left-radius: 7px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 14px;
+  font-size: 14px;
+}
+
+.searchBox input[type=text]:focus {
+  outline: none;
+}
+
+.searchBox button {
+  border: none;
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
+  min-width: 35px;
+}
+
+#showcase {
+  background-image: url(assets/main_page.jpg);
+  background-size: cover;
+  height: 35vh;
+  background-position: center;
+  position: relative;
+}
+
+#showcase .searchBox {
+  width: 50vw;
+  position: absolute;
+  top: 45%;
+  margin: auto 25vw;
+  border: none;
+}
+
+.card {
+  border-radius: 12px;
+  height: 200px;
+  min-width: 280px;
+  background-size: cover;
+  background-position: center;
+  padding: 0.7rem;
+  font-size: .8em;
+  margin: 3px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  color: #999;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  margin-bottom: auto;
+}
+
+.card p {
+  font-size: 0.9rem;
+}
+
+.card-light {
+  -webkit-box-shadow: inset 0 -20px 150px black;
+          box-shadow: inset 0 -20px 150px black;
+  color: #ddd;
+}
+
+.rating {
+  color: orangered;
+}
+
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow-x: scroll;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  margin-left: 6px;
+}
+
+.card-container::-webkit-scrollbar {
+  height: 0px !important;
+}
+
+.card__roll {
+  max-width: 100%;
+  margin: 25px 0px;
+  font-family: montserrat, sans-serif;
+  color: #333;
+}
+
+.card__roll h1 {
+  font-size: 1.2em;
+  margin-bottom: 0.9rem;
+  margin-left: 8px;
+}
+
+.recommended .card1 {
+  background-image: url(assets/peda.jpg);
+}
+
+.recommended .card2 {
+  background-image: url(assets/NrupatungaBetta.jpg);
+}
+
+.recommended .card3 {
+  background-image: url(assets/SadhankeriGarden.jpg);
+}
+
+.recommended .card4 {
+  background-image: url(assets/ShriSiddharoodhaSwamyMath.jpg);
+}
+
+.recommended .card5 {
+  background-image: url(assets/MylarlingaTemple1.jpg);
+}
+
+.places_to_go .card1 {
+  background-image: url(assets/AgadiThota.jpg);
+}
+
+.places_to_go .card2 {
+  background-image: url(assets/Nuggikeri.jpg);
+}
+
+.places_to_go .card3 {
+  background-image: url(assets/ChandramauleshTemple.jpg);
+}
+
+.places_to_go .card4 {
+  background-image: url(assets/KitturRaniChannammaCircle.jpg);
+}
+
+.places_to_go .card5 {
+  background-image: url(assets/unkalLake.jpg);
+}
+
+.restaurants .card1 {
+  background-image: url(assets/the-sigdi.jpg);
+}
+
+.restaurants .card2 {
+  background-image: url(assets/gufha.jpg);
+}
+
+.restaurants .card3 {
+  background-image: url(assets/theoaks.jpg);
+}
+
+.restaurants .card4 {
+  background-image: url(assets/barbequeNation.jpg);
+}
+
+.restaurants .card5 {
+  background-image: url(assets/basaveshwar-khanavali.jpg);
+}
+
+.hotels .card1 {
+  background-image: url(assets/president-hotel.jpg);
+}
+
+.hotels .card2 {
+  background-image: url(assets/naveen-hotel.jpg);
+}
+
+.hotels .card3 {
+  background-image: url(assets/mayur-resort.jpg);
+}
+
+.hotels .card4 {
+  background-image: url(assets/pearl-hotel.jpg);
+}
+
+.hotels .card5 {
+  background-image: url(assets/denissons-hotel.jpg);
+}
+
+.college .card1 {
+  background-image: url(assets/sdm/main.jpg);
+}
+
+.college .card2 {
+  background-image: url(https://sdmmedicalcollege.org/assets/admin/ckeditor/kcfinder/upload/images/SDM-Image-5%281%29.png);
+}
+
+.college .card3 {
+  background-image: url(https://www.kud.ac.in/slider/images/2-KUD.jpg);
+}
+
+.college .card4 {
+  background-image: url(https://www.kacd.ac.in/assets/upload/slider/1481009624_kacd.jpg);
+}
+
+.college .card5 {
+  background-image: url(https://images.shiksha.com/mediadata/images/1555319642phpYFbGG3.jpeg);
+}
+
+footer {
+  background-color: black;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 1.7rem;
+  font-size: 0.8rem;
+}
+
+footer .logo {
+  font-size: 1.6rem;
+  font-family: 'Allura', cursive;
+  margin-right: 8px;
+}
+
+@media (max-width: 1050px) {
+  .card {
+    border-radius: 7px;
+    height: 230px;
+    min-width: 160px;
+    width: 160px;
+    padding: 0.5rem;
+  }
+  footer {
+    font-size: 1rem;
+    padding: 0.6rem;
+  }
+}
+/*# sourceMappingURL=index2.css.map */

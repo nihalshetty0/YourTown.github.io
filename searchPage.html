@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap">
+    <style>
+        .searchBox{
+            display: flex;
+            margin: 13px 0 0 5px;
+            transform: translateY(-150px);
+            transition: transform 500ms ease-in-out;
+        }
+        .searchBox input{
+            flex: 1;
+            background-color: #ddd;
+            border: none;
+            height: 25px;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 15px;
+            outline: none;
+            padding: 3px;
+            font-size: 15px;
+            
+        }
+        .searchBox i{
+            background-color: #ddd;
+            padding: 5px;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+            padding-left: 10px;
+            padding-top: 7px;
+            font-size: 14px;
+            color: #666;
+        }
+       
+        .cancel{
+            color: #666;
+            text-decoration: none;
+            margin-left: 5px;
+            align-self: center;
+            font-family: sans-serif;
+            font-size: 15px;
+        }
+        section h3{
+            margin: 20px;
+            color: #555;
+            font-family: montserrat;
+            font-size: 11px;
+            font-weight: 550;
+        }
+        .redirect{
+            text-decoration: none;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<form class="searchBox" action="">
+    <i class="fa fa-search"></i>
+    <input type="text">
+    <a class="cancel" href="index.html">Cancel</a>
+</form>
+
+<section>
+    <h3>Akshay Park</h3>
+    <h3>Nrupatunga Betta</h3>
+    <h3 href="sdm.html"><a href="sdm.html" class="redirect"> Sri Dharmasthala Manjunatheshwara College of Engineering and Technology </a>  </h3>
+    <h3>Shri Siddharoodha Swamy Math</h3>
+    <h3>Denissons hotel</h3>
+    <h3>Café Coffee Day</h3>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function(){
+        const searchBox = document.querySelector('.searchBox');
+        setTimeout(()=> searchBox.style.transform = "translateY(0px)", 1);
+    
+    })
+</script>
+</body>
+</html>
