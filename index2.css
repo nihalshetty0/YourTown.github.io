@@ -194,7 +194,7 @@ a {
 .card {
   border-radius: 12px;
   height: 200px;
-  min-width: 280px;
+  min-width: minmax(min-content, 280px);
   background-size: cover;
   background-position: center;
   padding: 0.7rem;
@@ -211,6 +211,7 @@ a {
       -ms-flex-pack: end;
           justify-content: flex-end;
   color: #999;
+  
 }
 
 .card h3 {
